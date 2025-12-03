@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   adventd1.c                                         :+:      :+:    :+:   */
+/*   Part2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maziza <matan.aziza@learner.42.tech>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 15:47:24 by maziza            #+#    #+#             */
-/*   Updated: 2025/12/01 16:05:22 by maziza           ###   ########.fr       */
+/*   Updated: 2025/12/04 00:52:04 by maziza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ int	main(int ac, char **av)
 			}
 		}
 	}
-	printf("final count : %d\n", zero_count);
+	printf("Number of times the safe dial passed through \"Zero\" : %d\n", zero_count);
 	return (0);
 }

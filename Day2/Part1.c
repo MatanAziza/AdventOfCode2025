@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   Part1.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maziza <matan.aziza@learner.42.tech>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:35:09 by maziza            #+#    #+#             */
-/*   Updated: 2025/12/02 14:36:47 by maziza           ###   ########.fr       */
+/*   Updated: 2025/12/04 00:52:40 by maziza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ int	main(int ac, char **av)
 			nb_start++;
 		}
 	}
-	printf("final value = %lld\n", value);
+	printf("Sum of all invalid IDs with format \"xyzxyz\" : %lld\n", value);
 	return (0);
 }

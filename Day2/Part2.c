@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   Part2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maziza <matan.aziza@learner.42.tech>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:35:09 by maziza            #+#    #+#             */
-/*   Updated: 2025/12/02 14:36:47 by maziza           ###   ########.fr       */
+/*   Updated: 2025/12/04 00:53:14 by maziza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,6 @@ int	main(int ac, char **av)
 			nb_start++;
 		}
 	}
-	printf("final value = %lld\n", value);
+	printf("Sum of invalid IDs where the ID is a repetion of a pattern : %lld\n", value);
 	return (0);
 }

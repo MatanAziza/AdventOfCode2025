@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   Part2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maziza <matan.aziza@learner.42.tech>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:35:09 by maziza            #+#    #+#             */
-/*   Updated: 2025/12/02 14:36:47 by maziza           ###   ########.fr       */
+/*   Updated: 2025/12/04 00:54:04 by maziza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,6 @@ int	main(int ac, char **av)
 		if (turn[0] == 'x')
 			break ;
 	}
-	printf("final value = %lld\n", final_nb);
+	printf("Set of 12 batteries to turn on with the highet joltage : %lld\n", final_nb);
 	return (0);
 }

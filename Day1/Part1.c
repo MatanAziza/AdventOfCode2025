@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   adventd1.c                                         :+:      :+:    :+:   */
+/*   Part1.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maziza <matan.aziza@learner.42.tech>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 15:47:24 by maziza            #+#    #+#             */
-/*   Updated: 2025/12/01 16:05:22 by maziza           ###   ########.fr       */
+/*   Updated: 2025/12/04 00:50:07 by maziza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ int	main(int ac, char **av)
 		if (pos_tab == 0)
 			zero_count++;
 	}
-	printf("final count : %d\n", zero_count);
+	printf("Numbers of \"Zero\" stops : %d\n", zero_count);
 	return (0);
 }
