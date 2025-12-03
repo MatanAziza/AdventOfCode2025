@@ -68,7 +68,6 @@ int	main(int ac, char **av)
 			}
 			nb_start++;
 		}
-		printf("%s\n", turn);
 	}
 	printf("final value = %lld\n", value);
 	return (0);
