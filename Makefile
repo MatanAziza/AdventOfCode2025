@@ -1,16 +1,12 @@
 NAME1=safe
 NAME2=invalid_ids
 NAME3=batteries
+NAME4=forklift
 
 SRC=GNL/*.c
 
 CC=cc
 CFLAGS= -Wall -Wextra -Werror
-
-DAY := $(word 1, $(MAKECMDGOALS))
-PART := $(word 2, $(MAKECMDGOALS))
-NAME := $(NAME$(DAY))_$(PART)
-DAY_PART_O:=Day$(DAY)/Part$(PART).o
 
 all:1 2 3
 
@@ -74,6 +70,24 @@ $(NAME3)_2:Day3/Part2.o
 Day3/Part2.o:Day3/Part2.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
+41:$(NAME4)_1
+
+$(NAME4)_1:Day4/Part1.o
+	@$(CC) $(CFLAGS) $(SRC) Day4/Part1.o -o $(NAME4)_1
+	@./$(NAME4)_1 Inputs/4
+
+Day4/Part1.o:Day4/Part1.c
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+42:$(NAME4)_2
+
+$(NAME4)_2:Day4/Part2.o
+	@$(CC) $(CFLAGS) $(SRC) Day4/Part2.o -o $(NAME4)_2
+	@./$(NAME4)_2 Inputs/4
+
+Day4/Part2.o:Day4/Part2.c
+	@$(CC) $(CFLAGS) -c $< -o $@
+
 help:
 	@echo "Comment utiliser le Makefile:"
 	@echo "make <DAY><PART> pour une partie"
@@ -85,5 +99,5 @@ clean:
 	rm -rf */*.o
 
 fclean:clean
-	rm -rf $(NAME1)* $(NAME2)* $(NAME3)*
+	rm -rf $(NAME1)* $(NAME2)* $(NAME3)* $(NAME4)*
 
