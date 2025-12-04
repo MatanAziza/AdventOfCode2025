@@ -8,13 +8,15 @@ SRC=GNL/*.c
 CC=cc
 CFLAGS= -Wall -Wextra -Werror
 
-all:1 2 3
+all:1 2 3 4
 
 1:11 12
 
 2:21 22
 
 3:31 32
+
+4: 41 42
 
 11:$(NAME1)_1
 

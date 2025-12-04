@@ -80,6 +80,6 @@ int	main(int ac, char **av)
 			nb_start++;
 		}
 	}
-	printf("Sum of invalid IDs where the ID is a repetion of a pattern : %lld\n", value);
+	printf("Sum of invalid IDs with a repetition pattern \"abcabc\", \"ababab\" ...: %lld\n", value);
 	return (0);
 }

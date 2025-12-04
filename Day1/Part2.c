@@ -60,6 +60,6 @@ int	main(int ac, char **av)
 			}
 		}
 	}
-	printf("Number of times the safe dial passed through \"Zero\" : %d\n", zero_count);
+	printf("Number of times the safe dial passed through \"0\" : %d\n", zero_count);
 	return (0);
 }

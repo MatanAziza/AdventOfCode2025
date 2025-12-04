@@ -52,6 +52,6 @@ int	main(int ac, char **av)
 		if (pos_tab == 0)
 			zero_count++;
 	}
-	printf("Numbers of \"Zero\" stops : %d\n", zero_count);
+	printf("Number of times the safe dial stopped on \"0\" stops : %d\n", zero_count);
 	return (0);
 }

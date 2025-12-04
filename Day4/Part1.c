@@ -84,6 +84,6 @@ int	main(int ac, char **av)
 		}
 		i++;
 	}
-	printf("%d", accessible);
+	printf("Number of rolls accessible : %d\n", accessible);
 	return (0);
 }

@@ -55,9 +55,6 @@ int	main(int ac, char **av)
 	while (i < 135)
 		tab[i++] = get_next_line(fd);
 	tab[i] = NULL;
-	i = 0;
-	while (i < 135)
-		printf("%s", tab[i++]);
 	while (1)
 	{
 		i = 0;
@@ -115,7 +112,6 @@ int	main(int ac, char **av)
 				}
 				j++;
 			}
-			printf("%s",tab[i]);
 			i++;
 		}
 		i = 0;
@@ -130,10 +126,10 @@ int	main(int ac, char **av)
 			}
 			i++;
 		}
-		printf("Nb of rolls removed : %d\n", total);
 		if (accessible == 0)
 			break;
 		total += accessible;
 	}
+	printf("Total number of rolls removed : %d\n", total);
 	return (0);
 }

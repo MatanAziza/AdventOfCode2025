@@ -69,6 +69,6 @@ int	main(int ac, char **av)
 			nb_start++;
 		}
 	}
-	printf("Sum of all invalid IDs with format \"xyzxyz\" : %lld\n", value);
+	printf("Sum of invalid IDs with a double pattern \"abcabc\" : %lld\n", value);
 	return (0);
 }

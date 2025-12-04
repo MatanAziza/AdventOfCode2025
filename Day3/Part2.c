@@ -168,6 +168,6 @@ int	main(int ac, char **av)
 		if (turn[0] == 'x')
 			break ;
 	}
-	printf("Set of 12 batteries to turn on with the highet joltage : %lld\n", final_nb);
+	printf("Set of 12 batteries to turn on with the highest joltage : %lld\n", final_nb);
 	return (0);
 }
