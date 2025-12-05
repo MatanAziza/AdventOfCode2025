@@ -6,15 +6,15 @@
 
 int	main(int ac, char **av)
 {
-	int		fd;
-	unsigned long long		*tab[178];
-	int		line;
-	int		line2;
+	int					fd;
+	unsigned long long	*tab[178];
+	int					line;
+	int					line2;
 	unsigned long long	fresh;
-	int		i_str;
-	unsigned long long		start;
-	unsigned long long end;
-	char	*str;
+	int					i_str;
+	unsigned long long	start;
+	unsigned long long	end;
+	char				*str;
 
 	ac++;
 	fd = open(av[1], O_RDONLY);
@@ -39,21 +39,52 @@ int	main(int ac, char **av)
 	}
 	tab[line] = NULL;
 	line = 0;
-	while (line < 177)
+	int reset = 0;
+	while (line < 177 || reset != 0)
 	{
-		line2 = line+1;
+		if (reset != 0)
+		{
+			reset = 0;
+			line = 0;
+		}
+		line2 = line + 1;
 		while (line2 < 177)
 		{
-			if (tab[line][0] >= tab[line2][0] && tab[line][1] <= tab[line2][1])
-				tab[line][0] = tab[line2][1]+1;
-			if (tab[line][1] >= tab[line2][0] && tab[line][1] <= tab[line2][1])
-				tab[line][1] = tab[line2][0]-1;
+			if (tab[line2][0] <= tab[line][0] && tab[line][0] <= tab[line2][1]
+				&& tab[line2][0] <= tab[line][1]
+				&& tab[line][1] <= tab[line2][1])
+			{
+				tab[line][0] = 1;
+				tab[line][1] = 0;
+				line2++;
+				reset = 1;
+				break ;
+			}
+			else if (tab[line2][0] <= tab[line][0]
+				&& tab[line][0] <= tab[line2][1]
+				&& tab[line][1] > tab[line2][1])
+				tab[line][0] = tab[line2][1] + 1;
+			else if (tab[line2][0] > tab[line][0]
+				&& tab[line2][0] <= tab[line][1]
+				&& tab[line][1] <= tab[line2][1])
+				tab[line][1] = tab[line2][0] - 1;
+			else if (tab[line2][0] > tab[line][0] && tab[line2][1] < tab[line][1])
+			{
+				tab[line2][0] = 1;
+				tab[line2][1] = 0;
+				reset = 1;
+				break;
+			}
 			line2++;
 		}
-		if (tab[line][0] <= tab[line][1])
-			fresh+=(tab[line][1]-tab[line][0]+1);
 		line++;
 	}
-	printf("fresh = %lld\n", fresh);
+	line = 0;
+	while (line < 177)
+	{
+		fresh += (tab[line][1] - tab[line][0] + 1);
+		line++;
+	}
+	printf("Total number of fresh ingredients : %lld\n", fresh);
 	return (0);
 }

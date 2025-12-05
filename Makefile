@@ -2,27 +2,20 @@ NAME1=safe
 NAME2=invalid_ids
 NAME3=batteries
 NAME4=forklift
+NAME5 = temp
 
 SRC=GNL/*.c
 
 CC=cc
 CFLAGS= -Wall -Wextra -Werror
 
-all:1 2 3 4
-
-1:11 12
-
-2:21 22
-
-3:31 32
-
-4: 41 42
+all:11 12 21 22 31 32 41 42 51 52
 
 11:$(NAME1)_1
 
 $(NAME1)_1:Day1/Part1.o
 	@$(CC) $(CFLAGS) $(SRC) Day1/Part1.o -o $(NAME1)_1
-	@./$(NAME1)_1 Inputs/1
+	@echo "Day 1 Part 1 :";./$(NAME1)_1 Inputs/1
 
 Day1/Part1.o:Day1/Part1.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -31,7 +24,7 @@ Day1/Part1.o:Day1/Part1.c
 
 $(NAME1)_2:Day1/Part2.o
 	@$(CC) $(CFLAGS) $(SRC) Day1/Part2.o -o $(NAME1)_2
-	@./$(NAME1)_2 Inputs/1
+	@echo "Day 1 Part 2 :";./$(NAME1)_2 Inputs/1
 
 Day1/Part2.o:Day1/Part2.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -40,7 +33,7 @@ Day1/Part2.o:Day1/Part2.c
 
 $(NAME2)_1:Day2/Part1.o
 	@$(CC) $(CFLAGS) $(SRC) Day2/Part1.o -o $(NAME2)_1
-	@./$(NAME2)_1 Inputs/2
+	@echo "Day 2 Part 1 :";./$(NAME2)_1 Inputs/2
 
 Day2/Part1.o:Day2/Part1.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -49,7 +42,7 @@ Day2/Part1.o:Day2/Part1.c
 
 $(NAME2)_2:Day2/Part2.o
 	@$(CC) $(CFLAGS) $(SRC) Day2/Part2.o -o $(NAME2)_2
-	@./$(NAME2)_2 Inputs/2
+	@echo "Day 2 Part 2 :";./$(NAME2)_2 Inputs/2
 
 Day2/Part2.o:Day2/Part2.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -58,7 +51,7 @@ Day2/Part2.o:Day2/Part2.c
 
 $(NAME3)_1:Day3/Part1.o
 	@$(CC) $(CFLAGS) $(SRC) Day3/Part1.o -o $(NAME3)_1
-	@./$(NAME3)_1 Inputs/3
+	@echo "Day 3 Part 1 :";./$(NAME3)_1 Inputs/3
 
 Day3/Part1.o:Day3/Part1.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -67,7 +60,7 @@ Day3/Part1.o:Day3/Part1.c
 
 $(NAME3)_2:Day3/Part2.o
 	@$(CC) $(CFLAGS) $(SRC) Day3/Part2.o -o $(NAME3)_2
-	@./$(NAME3)_2 Inputs/3
+	@echo "Day 3 Part 2 :";./$(NAME3)_2 Inputs/3
 
 Day3/Part2.o:Day3/Part2.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -76,7 +69,7 @@ Day3/Part2.o:Day3/Part2.c
 
 $(NAME4)_1:Day4/Part1.o
 	@$(CC) $(CFLAGS) $(SRC) Day4/Part1.o -o $(NAME4)_1
-	@./$(NAME4)_1 Inputs/4
+	@echo "Day 4 Part 1 :";./$(NAME4)_1 Inputs/4
 
 Day4/Part1.o:Day4/Part1.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -85,10 +78,29 @@ Day4/Part1.o:Day4/Part1.c
 
 $(NAME4)_2:Day4/Part2.o
 	@$(CC) $(CFLAGS) $(SRC) Day4/Part2.o -o $(NAME4)_2
-	@./$(NAME4)_2 Inputs/4
+	@echo "Day 4 Part 2 :";./$(NAME4)_2 Inputs/4
 
 Day4/Part2.o:Day4/Part2.c
 	@$(CC) $(CFLAGS) -c $< -o $@
+
+51:$(NAME5)_1
+
+$(NAME5)_1:Day5/Part1.o
+	@$(CC) $(CFLAGS) $(SRC) Day5/Part1.o -o $(NAME5)_1
+	@echo "Day 5 Part 1 :";./$(NAME5)_1 Inputs/5
+
+Day5/Part1.o:Day5/Part1.c
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+52:$(NAME5)_2
+
+$(NAME5)_2:Day5/Part2.o
+	@$(CC) $(CFLAGS) $(SRC) Day5/Part2.o -o $(NAME5)_2
+	@echo "Day 5 Part 2 :";./$(NAME5)_2 Inputs/5
+
+Day5/Part2.o:Day5/Part2.c
+	@$(CC) $(CFLAGS) -c $< -o $@
+
 
 help:
 	@echo "Comment utiliser le Makefile:"
@@ -101,5 +113,5 @@ clean:
 	rm -rf */*.o
 
 fclean:clean
-	rm -rf $(NAME1)* $(NAME2)* $(NAME3)* $(NAME4)*
+	rm -rf $(NAME1)* $(NAME2)* $(NAME3)* $(NAME4)* $(NAME5)*
 

@@ -59,6 +59,6 @@ int	main(int ac, char **av)
 			line++;
 		}
 	}
-	printf("%d\n", fresh);
+	printf("Number of fresh ingredients in the ranges : %d\n", fresh);
 	return (0);
 }
