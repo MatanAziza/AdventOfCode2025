@@ -3,7 +3,7 @@ NAME2=invalid_ids
 NAME3=batteries
 NAME4=forklift
 NAME5=ingredients
-NAME6=temp1
+NAME6=sumandproducts
 NAME7=temp2
 NAME8=temp3
 NAME9=temp4
@@ -111,20 +111,20 @@ Day5/Part2.o:Day5/Part2.c
 61:$(NAME6)_1
 
 $(NAME6)_1:Day6/Part1.o
-	@$(CC) $(CFLAGS) $(SRC) Day6/Part1.o -o $(NAME6)_1
+	@$(CC) $(CFLAGS) $(SRC) Day6/Part1.o -o $(NAME6)_1 -lgmp
 	@echo "Day 6 Part 1 :";./$(NAME6)_1 Inputs/6
 
 Day6/Part1.o:Day6/Part1.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@ -lgmp
 
 62:$(NAME6)_2
 
 $(NAME6)_2:Day6/Part2.o
-	@$(CC) $(CFLAGS) $(SRC) Day6/Part2.o -o $(NAME6)_2
+	@$(CC) $(CFLAGS) $(SRC) Day6/Part2.o -o $(NAME6)_2 -lgmp
 	@echo "Day 6 Part 2 :";./$(NAME6)_2 Inputs/6
 
 Day6/Part2.o:Day6/Part2.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@ -lgmp
 
 71:$(NAME7)_1
 
