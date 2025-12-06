@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../GNL/get_next_line.h"
+#include "../GNL/get_next_line_________________________.h"
 #include <fcntl.h>
 #include <stdio.h>
 
@@ -52,12 +52,9 @@ int	main(int ac, char **av)
 		{
 			pos_tab += side_rotation;
 			nb_rotation--;
-			if (pos_tab > 99 || pos_tab < 0)
-				pos_tab = (pos_tab > 99) ? 0 : 99;
+			pos_tab %= 100;
 			if (pos_tab == 0)
-			{
 				zero_count++;
-			}
 		}
 	}
 	printf("Number of times the safe dial passed through \"0\" : %d\n", zero_count);

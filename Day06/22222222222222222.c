@@ -3,7 +3,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <gmp.h>
-#include "../GNL/get_next_line.h"
+#include "../GNL/get_next_line_________________________.h"
 #include <string.h>
 
 

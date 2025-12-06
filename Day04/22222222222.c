@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../GNL/get_next_line.h"
+#include "../GNL/get_next_line_________________________.h"
 #include <stdio.h>
 #include <fcntl.h>
 
