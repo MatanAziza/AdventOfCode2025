@@ -21,7 +21,7 @@ all:11 12 21 22 31 32 41 42 51 52 61 62 71 72 81 82 91 92 101 102 111 112 121 12
 11:$(NAME1)_1
 
 $(NAME1)_1:Day1/Part1.o
-	@$(CC) $(CFLAGS) $(SRC) Day1/Part1.o -o $(NAME1)_1
+	@$(CC) $(CFLAGS) $(SRC) Day01/Part1.o -o $(NAME1)_1
 	@echo "Day 1 Part 1 :";./$(NAME1)_1 Inputs/1
 
 Day1/Part1.o:Day1/Part1.c
@@ -30,7 +30,7 @@ Day1/Part1.o:Day1/Part1.c
 12:$(NAME1)_2
 
 $(NAME1)_2:Day1/Part2.o
-	@$(CC) $(CFLAGS) $(SRC) Day1/Part2.o -o $(NAME1)_2
+	@$(CC) $(CFLAGS) $(SRC) Day01/Part2.o -o $(NAME1)_2
 	@echo "Day 1 Part 2 :";./$(NAME1)_2 Inputs/1
 
 Day1/Part2.o:Day1/Part2.c
@@ -39,7 +39,7 @@ Day1/Part2.o:Day1/Part2.c
 21:$(NAME2)_1
 
 $(NAME2)_1:Day2/Part1.o
-	@$(CC) $(CFLAGS) $(SRC) Day2/Part1.o -o $(NAME2)_1
+	@$(CC) $(CFLAGS) $(SRC) Day02/Part1.o -o $(NAME2)_1
 	@echo "Day 2 Part 1 :";./$(NAME2)_1 Inputs/2
 
 Day2/Part1.o:Day2/Part1.c
@@ -48,7 +48,7 @@ Day2/Part1.o:Day2/Part1.c
 22:$(NAME2)_2
 
 $(NAME2)_2:Day2/Part2.o
-	@$(CC) $(CFLAGS) $(SRC) Day2/Part2.o -o $(NAME2)_2
+	@$(CC) $(CFLAGS) $(SRC) Day02/Part2.o -o $(NAME2)_2
 	@echo "Day 2 Part 2 :";./$(NAME2)_2 Inputs/2
 
 Day2/Part2.o:Day2/Part2.c
@@ -57,7 +57,7 @@ Day2/Part2.o:Day2/Part2.c
 31:$(NAME3)_1
 
 $(NAME3)_1:Day3/Part1.o
-	@$(CC) $(CFLAGS) $(SRC) Day3/Part1.o -o $(NAME3)_1
+	@$(CC) $(CFLAGS) $(SRC) Day03/Part1.o -o $(NAME3)_1
 	@echo "Day 3 Part 1 :";./$(NAME3)_1 Inputs/3
 
 Day3/Part1.o:Day3/Part1.c
@@ -66,7 +66,7 @@ Day3/Part1.o:Day3/Part1.c
 32:$(NAME3)_2
 
 $(NAME3)_2:Day3/Part2.o
-	@$(CC) $(CFLAGS) $(SRC) Day3/Part2.o -o $(NAME3)_2
+	@$(CC) $(CFLAGS) $(SRC) Day03/Part2.o -o $(NAME3)_2
 	@echo "Day 3 Part 2 :";./$(NAME3)_2 Inputs/3
 
 Day3/Part2.o:Day3/Part2.c
@@ -75,7 +75,7 @@ Day3/Part2.o:Day3/Part2.c
 41:$(NAME4)_1
 
 $(NAME4)_1:Day4/Part1.o
-	@$(CC) $(CFLAGS) $(SRC) Day4/Part1.o -o $(NAME4)_1
+	@$(CC) $(CFLAGS) $(SRC) Day04/Part1.o -o $(NAME4)_1
 	@echo "Day 4 Part 1 :";./$(NAME4)_1 Inputs/4
 
 Day4/Part1.o:Day4/Part1.c
@@ -84,7 +84,7 @@ Day4/Part1.o:Day4/Part1.c
 42:$(NAME4)_2
 
 $(NAME4)_2:Day4/Part2.o
-	@$(CC) $(CFLAGS) $(SRC) Day4/Part2.o -o $(NAME4)_2
+	@$(CC) $(CFLAGS) $(SRC) Day04/Part2.o -o $(NAME4)_2
 	@echo "Day 4 Part 2 :";./$(NAME4)_2 Inputs/4
 
 Day4/Part2.o:Day4/Part2.c
@@ -93,7 +93,7 @@ Day4/Part2.o:Day4/Part2.c
 51:$(NAME5)_1
 
 $(NAME5)_1:Day5/Part1.o
-	@$(CC) $(CFLAGS) $(SRC) Day5/Part1.o -o $(NAME5)_1
+	@$(CC) $(CFLAGS) $(SRC) Day05/Part1.o -o $(NAME5)_1
 	@echo "Day 5 Part 1 :";./$(NAME5)_1 Inputs/5
 
 Day5/Part1.o:Day5/Part1.c
@@ -111,7 +111,7 @@ Day5/Part2.o:Day5/Part2.c
 61:$(NAME6)_1
 
 $(NAME6)_1:Day6/Part1.o
-	@$(CC) $(CFLAGS) $(SRC) Day6/Part1.o -o $(NAME6)_1 -lgmp
+	@$(CC) $(CFLAGS) $(SRC) Day06/Part1.o -o $(NAME6)_1 -lgmp
 	@echo "Day 6 Part 1 :";./$(NAME6)_1 Inputs/6
 
 Day6/Part1.o:Day6/Part1.c
@@ -120,7 +120,7 @@ Day6/Part1.o:Day6/Part1.c
 62:$(NAME6)_2
 
 $(NAME6)_2:Day6/Part2.o
-	@$(CC) $(CFLAGS) $(SRC) Day6/Part2.o -o $(NAME6)_2 -lgmp
+	@$(CC) $(CFLAGS) $(SRC) Day06/Part2.o -o $(NAME6)_2 -lgmp
 	@echo "Day 6 Part 2 :";./$(NAME6)_2 Inputs/6
 
 Day6/Part2.o:Day6/Part2.c
@@ -129,7 +129,7 @@ Day6/Part2.o:Day6/Part2.c
 71:$(NAME7)_1
 
 $(NAME7)_1:Day7/Part1.o
-	@$(CC) $(CFLAGS) $(SRC) Day7/Part1.o -o $(NAME7)_1
+	@$(CC) $(CFLAGS) $(SRC) Day07/Part1.o -o $(NAME7)_1
 	@echo "Day 7 Part 1 :";./$(NAME7)_1 Inputs/7
 
 Day7/Part1.o:Day7/Part1.c
@@ -138,7 +138,7 @@ Day7/Part1.o:Day7/Part1.c
 72:$(NAME7)_2
 
 $(NAME7)_2:Day7/Part2.o
-	@$(CC) $(CFLAGS) $(SRC) Day7/Part2.o -o $(NAME7)_2
+	@$(CC) $(CFLAGS) $(SRC) Day07/Part2.o -o $(NAME7)_2
 	@echo "Day 7 Part 2 :";./$(NAME7)_2 Inputs/7
 
 Day7/Part2.o:Day7/Part2.c
@@ -147,7 +147,7 @@ Day7/Part2.o:Day7/Part2.c
 81:$(NAME8)_1
 
 $(NAME8)_1:Day8/Part1.o
-	@$(CC) $(CFLAGS) $(SRC) Day8/Part1.o -o $(NAME8)_1
+	@$(CC) $(CFLAGS) $(SRC) Day08/Part1.o -o $(NAME8)_1
 	@echo "Day 8 Part 1 :";./$(NAME8)_1 Inputs/8
 
 Day8/Part1.o:Day8/Part1.c
@@ -156,7 +156,7 @@ Day8/Part1.o:Day8/Part1.c
 82:$(NAME8)_2
 
 $(NAME8)_2:Day8/Part2.o
-	@$(CC) $(CFLAGS) $(SRC) Day8/Part2.o -o $(NAME8)_2
+	@$(CC) $(CFLAGS) $(SRC) Day08/Part2.o -o $(NAME8)_2
 	@echo "Day 8 Part 2 :";./$(NAME8)_2 Inputs/8
 
 Day8/Part2.o:Day8/Part2.c
@@ -165,7 +165,7 @@ Day8/Part2.o:Day8/Part2.c
 91:$(NAME9)_1
 
 $(NAME9)_1:Day9/Part1.o
-	@$(CC) $(CFLAGS) $(SRC) Day9/Part1.o -o $(NAME9)_1
+	@$(CC) $(CFLAGS) $(SRC) Day09/Part1.o -o $(NAME9)_1
 	@echo "Day 9 Part 1 :";./$(NAME9)_1 Inputs/9
 
 Day9/Part1.o:Day9/Part1.c
@@ -174,7 +174,7 @@ Day9/Part1.o:Day9/Part1.c
 92:$(NAME9)_2
 
 $(NAME9)_2:Day9/Part2.o
-	@$(CC) $(CFLAGS) $(SRC) Day9/Part2.o -o $(NAME9)_2
+	@$(CC) $(CFLAGS) $(SRC) Day09/Part2.o -o $(NAME9)_2
 	@echo "Day 9 Part 2 :";./$(NAME9)_2 Inputs/9
 
 Day9/Part2.o:Day9/Part2.c
