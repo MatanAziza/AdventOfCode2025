@@ -19,6 +19,7 @@ int	main(int ac, char **av)
 {
 	int fd = open(av[ac-1], O_RDONLY);
 	int	i = 0;
+	int	j;
 	char *tab[143];
 	int	count = 0;
 	while (i < 143)
@@ -27,12 +28,12 @@ int	main(int ac, char **av)
 	i = 1;
 	while (i < 142)
 	{
-		int	j = 0;
-		while (tab[i][j] != '\n')
+		j = 0;
+		while (j < 140)
 		{
-			if ((tab[i-1][j] == 'S' || tab[i-1][j] == '|') && tab[i][j] != '^')
+			if ((tab[i-1][j] == '.' || tab[i-1][j] == '|') && tab[i][j] != '/')
 				tab[i][j] = '|';
-			if (tab[i][j] == '^' && tab[i-1][j] == '|')
+			if (tab[i][j] == '/' && tab[i-1][j] == '|')
 			{
 				count++;
 				tab[i][j-1] = '|';
@@ -43,8 +44,6 @@ int	main(int ac, char **av)
 		i++;
 	}
 	i = 0;
-	while (i < 143)
-		printf("%s", tab[i++]);
-	printf("nombre de splits : %i\n", count);
+	printf("Nombre de zones où le tachyon peut atterrir : %i\n", count);
 	return (0);
 }
